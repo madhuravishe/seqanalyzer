@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Complement Analysis</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Chart.js for Graphs -->
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">DNA Analysis</h1>
+    </header>
+    
+    <div class="container">
+        <div class="input-section">
+            <label>Enter DNA Sequence:</label>
+            <textarea id="dnaInput" class="input-field large-textarea" placeholder="ATCG..." required></textarea>
+            <button class="btn" onclick="getComplement()">Get Analysis</button>
+        </div>
+
+        <div class="result-container">
+            <!-- Pie Chart -->
+            <div class="chart-container">
+                <canvas id="contentChart"></canvas>
+            </div>
+
+            <!-- Analysis Results -->
+            <div class="result-info">
+                <h2>Analysis Results</h2>
+                <p><strong>Complementary DNA:</strong> <span id="complementResult"></span></p>
+                <p><strong>DNA Length:</strong> <span id="DnaLength"></span></p>
+                <p><strong>GC Content:</strong> <span id="gcContent"></span></p>
+                <p><strong>AT Content:</strong> <span id="atContent"></span></p>
+                <p><strong>A Count:</strong> <span id="countA"></span></p>
+                <p><strong>T Count:</strong> <span id="countT"></span></p>
+                <p><strong>G Count:</strong> <span id="countG"></span></p>
+                <p><strong>C Count:</strong> <span id="countC"></span></p>
+
+                <div class="chart-container">
+                    <canvas id="gcAtChart"></canvas> <!-- Bar Chart for AT & GC Content -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 BioSeq Analyzer. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script> <!-- JavaScript File -->
+</body>
+</html>

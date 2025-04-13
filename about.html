@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>    
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1 class="fade-in">About</h1>
+    </header>
+
+    <div class="container">
+        <h2>Understanding DNA, Proteins, and Genes</h2>
+
+        <section>
+            <h3>What is DNA?</h3>
+            <button class="toggle-btn" onclick="toggleInfo('dna-info')">Read More</button>
+            <p id="dna-info" class="info-text">
+                DNA (Deoxyribonucleic Acid) is the blueprint of life. It carries genetic instructions used in growth, development, and reproduction. Each DNA molecule is made up of nucleotides, which include Adenine (A), Thymine (T), Cytosine (C), and Guanine (G).
+            </p>
+        </section>
+
+        <section>
+            <h3>What are Genes?</h3>
+            <button class="toggle-btn" onclick="toggleInfo('genes-info')">Read More</button>
+            <p id="genes-info" class="info-text">
+                Genes are segments of DNA that code for specific proteins. They determine physical traits, influence susceptibility to diseases, and play a crucial role in inheritance.
+            </p>
+        </section>
+
+        <section>
+            <h3>How Do Proteins Work?</h3>
+            <button class="toggle-btn" onclick="toggleInfo('proteins-info')">Read More</button>
+            <p id="proteins-info" class="info-text">
+                Proteins are molecules made of amino acids and serve as building blocks for cells, enzymes, and hormones. They are synthesized based on genetic codes present in DNA through transcription and translation processes.
+            </p>
+        </section>
+
+        <section>
+            <h3>The Role of DNA Analysis in Genetic Disorders</h3>
+            <button class="toggle-btn" onclick="toggleInfo('genetic-info')">Read More</button>
+            <p id="genetic-info" class="info-text">
+                By analyzing DNA sequences, scientists can detect mutations that may cause genetic disorders such as cystic fibrosis, sickle cell anemia, and Huntington’s disease. This project aims to help identify such disorders through advanced sequence analysis.
+            </p>
+        </section>
+
+        <section>
+            <h3>Research Papers and Notable Scientists</h3>
+            <button class="toggle-btn" onclick="toggleInfo('research-info')">Read More</button>
+            <p id="research-info" class="info-text">
+                Scientific research has significantly contributed to understanding genetic diseases. Some landmark papers include Watson and Crick’s 1953 paper on the structure of DNA, and modern research on CRISPR technology by Jennifer Doudna and Emmanuelle Charpentier. These studies have paved the way for advancements in genetic engineering and disease treatment.
+            </p>
+            <button class="submit-btn" onclick="openForm()">Submit Research Paper</button>
+
+            <div id="research-form" class="form-container">
+                <h3>Submit Your Research Paper</h3>
+                <form>
+                    <label for="name">Your Name:</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+
+                    <label for="title">Paper Title:</label>
+                    <input type="text" id="title" placeholder="Enter research title" required>
+
+                    <label for="link">Research Link (if any):</label>
+                    <input type="url" id="link" placeholder="Enter research paper URL">
+
+                    <button type="submit">Submit</button>
+                    <button type="button" class="close-btn" onclick="closeForm()">Close</button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Bioseq Analyzer. All Rights Reserved.</p>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleInfo(sectionId) {
+            var element = document.getElementById(sectionId);
+            if (element.style.display === "none" || element.style.display === "") {
+                element.style.display = "block";
+            } else {
+                element.style.display = "none";
+            }
+        }
+
+        function openForm() {
+            document.getElementById("research-form").style.display = "block";
+        }
+
+        function closeForm() {
+            document.getElementById("research-form").style.display = "none";
+        }
+    </script>
+
+    <style>
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .form-container {
+            display: none;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            width: 300px;
+        }
+
+        .form-container h3 {
+            margin-bottom: 10px;
+        }
+
+        .form-container input {
+            width: 100%;
+            padding: 8px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            width: 100%;
+        }
+
+        .form-container button.close-btn {
+            background-color: #dc3545;
+            margin-top: 5px;
+        }
+
+        .form-container button:hover {
+            opacity: 0.8;
+        }
+    </style>
+</body>
+</html>

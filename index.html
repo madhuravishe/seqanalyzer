@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genetic Disease Display</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px;
+            font-size: 24px;
+        }
+
+        nav {
+            background: #333;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 10px;
+            font-size: 18px;
+            padding: 8px 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: #007bff;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 50px 20px;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        .slogan {
+            font-size: 28px;
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .info-section {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .info-section h3 {
+            color: #007bff;
+        }
+
+        .start-btn {
+            background: #28a745;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 30px;
+            transition: 0.3s;
+        }
+
+        .start-btn:hover {
+            background: #218838;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 50px;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-icon {
+            color: white;
+            margin: 0 10px;
+            font-size: 20px;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bioseq Analyzer</h1>
+    </header>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="sequence.html">Input Sequence</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="transcript.html">Transcript</a>
+        <a href="complement.html">Complement</a>
+        <a href="replication.html">Replication</a>
+    </nav>
+
+    <div class="container">
+        <p class="slogan">"Unraveling the Code of Life – One Sequence at a Time"</p>
+
+        <div class="info-section">
+            <h3>What is a Genetic Disease?</h3>
+            <p>Genetic diseases occur due to mutations in DNA sequences, which may lead to conditions such as sickle cell anemia, cystic fibrosis, and Huntington's disease. Identifying these mutations early can help with diagnosis and treatment.</p>
+        </div>
+
+        <div class="info-section">
+            <h3>How Proteins Play a Role</h3>
+            <p>Proteins, synthesized from DNA instructions, are crucial for cellular functions. Mutations can affect protein structure, leading to diseases. Understanding protein interactions helps in disease research.</p>
+        </div>
+
+        <button class="start-btn" onclick="location.href='sequence.html'">Start Analysis</button>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Bioseq Analyzer. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+    </footer>
+</body>
+</html>

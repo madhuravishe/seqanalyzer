@@ -1,0 +1,316 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+header {
+    background: linear-gradient(90deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    background: #222;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: 500;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+nav a:hover {
+    background: #4CAF50;
+    transform: scale(1.1);
+    border-radius: 5px;
+}
+
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.container:hover {
+    transform: scale(1.02);
+}
+
+/* Enhancing Login Page Appearance */
+.login-container {
+    max-width: 380px;
+    margin: 60px auto;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Adding a Soft Glow Effect */
+.login-container::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    z-index: -1;
+    border-radius: 14px;
+    opacity: 0.2;
+}
+
+.login-form h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #2E8B57;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+}
+
+.login-form p {
+    font-size: 15px;
+    color: #666666;
+    margin-bottom: 20px;
+}
+ /*pie charts */
+.result-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.result-info {
+    flex: 1;
+    font-size: 16px;
+}
+
+.chart-container {
+    width: 300px;
+    height: 300px;
+    margin: auto;
+}
+
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/* Input Group Styling */
+.input-group {
+    text-align: left;
+    margin: 15px 0;
+    position: relative;
+}
+
+.input-group label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-size: 14px;
+}
+
+/* Input Fields with Icon */
+.input-group input {
+    width: 80%;
+    padding: 12px 40px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border 0.3s ease-in-out;
+}
+
+/* Input Focus Effect */
+.input-group input:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Adding Icons Inside Input Fields */
+.input-group i {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+    font-size: 16px;
+}
+
+.input-group input::placeholder {
+    color: #aaa;
+}
+
+/* Login Button Styling */
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 17px;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    background: linear-gradient(90deg, #4CAF50, #2E8B57);
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    background: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+/* Forgot Password Link */
+.forgot-password {
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.forgot-password a {
+    color: #2E8B57;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.forgot-password a:hover {
+    text-decoration: underline;
+    color: #1b5e20;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .login-container {
+        width: 90%;
+        padding: 30px;
+    }
+}
+
+
+/* Large Textarea for Long DNA Sequences */
+.large-textarea {
+    width: 100%;
+    height: 200px;
+    font-size: 16px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: vertical; /* Allow vertical resizing */
+    white-space: pre-wrap; /* Keeps sequences aligned */
+    word-wrap: break-word;
+}
+
+/* Button Styling */
+button {
+    background: linear-gradient(90deg, #4CAF50, #2E8B57);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    display: block;
+    margin: 15px 0;
+}
+
+
+button:hover {
+    background: #45a049;
+    transform: scale(1.05);
+}
+
+/* Result Display */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    padding: 10px;
+    background: #e8f5e9;
+    border-left: 5px solid #2E8B57;
+}
+
+/* Loader Container */
+#loader-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 5px;
+    height: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+    display: none; /* Initially hidden */
+}
+
+/* Progress Bar */
+#progress-bar {
+    width: 0%;
+    height: 100%;
+    background: #4CAF50;
+    transition: width 3.0s ease-in-out;
+}
+
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    transition: transform 0.3s;
+}
+
+.social-links a:hover {
+    transform: scale(1.2);
+    color: #4CAF50;
+}

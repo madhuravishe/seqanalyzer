@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DNA Replication</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function replicateDNA() {
+            let compDNA = document.getElementById("compDNA").value.toUpperCase();
+            let nonCompDNA = document.getElementById("nonCompDNA").value.toUpperCase();
+            let complementary = { 'A': 'T', 'T': 'A', 'C': 'G', 'G': 'C' };
+            
+            let leadingStrand = "";
+            let laggingStrand = "";
+            let okazakiFragments = [];
+            let fragment = "";
+            let terminationPoint = compDNA.length;
+            
+            for (let i = 0; i < compDNA.length; i++) {
+                leadingStrand += complementary[compDNA[i]] || '?';
+                laggingStrand = complementary[nonCompDNA[i]] + laggingStrand;
+                
+                if (i % 3 === 2 || i === compDNA.length - 1) {
+                    okazakiFragments.push(fragment);
+                    fragment = "";
+                } else {
+                    fragment = complementary[nonCompDNA[i]] + fragment;
+                }
+            }
+            
+            document.getElementById("origin").innerHTML = "Replication Origin: " + compDNA.charAt(0);
+            document.getElementById("leading").innerHTML = "Leading Strand: " + leadingStrand;
+            document.getElementById("lagging").innerHTML = "Lagging Strand: " + laggingStrand;
+            document.getElementById("okazaki").innerHTML = "Okazaki Fragments: " + okazakiFragments.join(" - ");
+            document.getElementById("termination").innerHTML = "Termination Point: Position " + terminationPoint;
+            document.getElementById("daughter1").innerHTML = "Daughter DNA 1: " + leadingStrand;
+            document.getElementById("daughter2").innerHTML = "Daughter DNA 2: " + laggingStrand;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>DNA Replication</h1>
+    </header>
+    
+    <div class="container">
+        <h2>Enter DNA Strands</h2>
+        <textarea id="compDNA" class="input-field large-textarea" placeholder="Enter Complementary Strand"></textarea>
+        <textarea id="nonCompDNA" class="input-field large-textarea" placeholder="Enter Non-Complementary Strand"></textarea>
+        <button onclick="replicateDNA()">Start Replication</button>
+        
+        <h3 id="origin"></h3>
+        <h3 id="leading"></h3>
+        <h3 id="lagging"></h3>
+        <h3 id="okazaki"></h3>
+        <h3 id="termination"></h3>
+        <h3 id="daughter1"></h3>
+        <h3 id="daughter2"></h3>
+    </div>
+    
+    <footer>
+        <p>&copy; 2025 Bioseq Analyzer. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
